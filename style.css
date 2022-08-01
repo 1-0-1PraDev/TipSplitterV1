@@ -1,0 +1,243 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --bg-clr-primary: hsl(172, 67%, 45%);
+    --light-grey-cyan: hsl(185, 41%, 84%);
+    --grey-cyan: hsl(186, 28%, 74%);
+    --input-clr: rgba(218, 216, 216, 0.794);
+    --dark-cyan: hsl(183, 100%, 15%);
+    --darkest-cyan: hsl(172, 67%, 45%);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey-cyan);
+}
+
+.container{
+    display: grid;
+    max-width: 940px;
+    padding: 2.34rem;
+    grid-template-columns: repeat(2, 1fr);
+    background: #fff;
+    border-radius: 13px;
+    grid-gap: 2rem;
+    box-shadow: 13px 13px 30px rgba(0, 0, 0, 0.6);
+}
+
+.container .leftBx {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+}
+
+.container .inputBx div{
+    display: flex;
+    justify-content: space-between;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.container .inputBx {
+    width: 100%;
+    /* background:Red; */
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .inputBx .box{
+    position: relative;
+}
+
+.container .inputBx .box input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: var(--input-clr);
+    padding: 0.6rem 0.4rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 6px;
+    text-align: right;
+}
+
+h3{
+    font-size: 1.3rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.container .selectTipBx .selectBx{
+    /* background:Red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.6rem;
+}
+
+.container .selectTipBx h3{
+    margin-bottom: 1rem;
+}
+
+.container .selectTipBx .selectBx .percentBx, .percentBx2{
+    /* background:Red; */
+    /* width: 100px; */
+    height: 54px;
+    cursor: pointer;
+    border-radius: 7px;
+    background: var(--dark-cyan);
+    display: flex;
+    color: #fff;
+    /* font-size: 2rem; */
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    align-items: center;
+}
+
+.container .selectTipBx .selectBx .percentBx:hover{
+    background: var(--darkest-cyan);
+}
+
+.container .selectTipBx .selectBx .percentBx.active{
+    background: rgb(45, 48, 47);
+}
+
+.container .selectTipBx .selectBx .percentBx2 input{
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: var(--input-clr);
+}
+
+.container .selectTipBx .selectBx .percentBx2 input::placeholder{
+    text-align: center !important;
+}
+
+.container .rightBx{
+    background: var(--dark-cyan);
+    border-radius: 30px;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .rightBx .topBx{
+    /* background:Red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 2.4rem;
+}
+
+.container .rightBx .topBx .single-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .rightBx .topBx .single-line .tip-amount {
+    color: #fff;
+}
+
+.total-amount-value , .tip-amount-value {
+    color: var(--darkest-cyan) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.container .rightBx .bottomBx .resetBtn{
+    display: inline-block;
+    width: 100%;
+    background: var(--darkest-cyan);
+    border: none;
+    outline: none;
+    padding: 1rem 0rem;
+    font-size: 1.34rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+
+.container .rightBx .bottomBx .resetBtn:hover{
+    background: rgb(4, 193, 203);
+    color: #fff;
+}
+
+.error{
+    color: red;
+    font-weight: 500;
+}
+
+@media(max-width: 991px){
+    .container{
+        grid-template-columns: 1fr;
+        margin: 0 3rem;
+    }
+}
+
+@media(max-width: 400px){
+    .container{
+        padding: 1rem;
+        margin: 0 1rem;
+    }
+}
+
+.top-heading{
+    /* background:red; */
+    text-align: center;
+    margin-bottom: 2.3rem;
+}
+
+
+.top-heading p{
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.tip-amount-value p, .total-amount-value p{
+    font-size: 1.3rem;
+}
+
+.bx1::before, .bx2::before{
+    content: "";
+    position: absolute;
+    top: 0.87rem;
+    left: 0.4rem;
+    background: url(./images/icon-dollar.svg) center / contain no-repeat;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.bx2::before{
+    background: url(./images/icon-person.svg) center / contain no-repeat;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip spliter using html css and javascript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="top-heading">
+            <p> Tip spli</p>
+            <p>- tter</p>
+        </div>
+        <div class="container">
+            <div class="leftBx">
+                <div class="inputBx">
+                    <div>
+                        <h3>Bill</h3>
+                        <!-- <p class="bill-error error">the error is occured</p> -->
+                    </div>
+                    <div class="box bx1">
+                        <input type="number" min="0" value="0" class="bill-amount">
+                    </div>
+                </div>
+                <div class="selectTipBx">
+                    <h3>Select Tip %</h3>
+                    <div class="selectBx">
+                        <div class="percentBx">
+                            5%
+                        </div>
+                        <div class="percentBx">
+                            10%
+                        </div>
+                        <div class="percentBx">
+                            15%
+                        </div>
+                        <div class="percentBx">
+                            25%
+                        </div>
+                        <div class="percentBx">
+                            50%
+                        </div>
+                        <div class="percentBx2">
+                            <input type="number" min="0" placeholder="Custom" class="customPercent">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputBx">
+                    <div>
+                        <h3>Number of People</h3>
+                        <!-- <p class="nop-error error">the error is occured</p> -->
+                    </div>
+                    <div class="box bx2">
+                        <input type="number" min="0" value="0" class="num-of-peoples">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rightBx">
+                <div class="topBx">
+                    <div class="single-line">
+                        <div class="tip-amount">
+                            <h3>Tip amount</h3>
+                            <p>/ person</p>
+                        </div>
+                        <div class="tip-amount-value">
+                            <p>$ <h1>0</h1></p>
+                        </div>
+                    </div>
+                    <div class="single-line">
+                        <div class="tip-amount">
+                            <h3>Total</h3>
+                            <p>/ person</p>
+                        </div>
+                        <div class="total-amount-value">
+                            <p>$ <h1>0</h1></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomBx">
+                    <button class="resetBtn">reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
